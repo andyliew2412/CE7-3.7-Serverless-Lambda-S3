@@ -10,7 +10,7 @@
 -         service: andyliew-serverless-lambda-s3
           runtime: nodejs20.x 
           region: us-east-1
-          name: andyliewProcessCSV
+          name: andyliewconvertCSVToTxt
           bucket: andyliew-serverless-bucket-input
           BucketName: andyliew-serverless-bucket-output
 
