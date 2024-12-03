@@ -8,7 +8,7 @@ const fixySchema = require('./schema.js')
 
 const s3 = new AWS.S3()
 
-module.exports.processCSV = async (event, context) => {
+module.exports.convertCSVToTxt = async (event, context) => {
   const csvBucket = event.Records[0].s3.bucket.name
   const csvKey = event.Records[0].s3.object.key
   const fixedWidthBucket = process.env.FIXED_WIDTH_BUCKET
