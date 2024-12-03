@@ -14,15 +14,16 @@ provider:
           Resource: "*"
 
 functions:
-  processCSV:
-    name: andyliewProcessCSV
-    handler: handler.processCSV
+  convertCsvToTxt:
+    name: andyliewconvertCsvToTxt
+    handler: handler.convertCsvToTxt
     events:
       - s3:
                   # CHANGE-TO-YOURNAME
           bucket: andyliew-serverless-bucket-input
           event: s3:ObjectCreated:*
           rules:
+            - prefix: input/
             - suffix: .csv
     environment:
       FIXED_WIDTH_BUCKET: ${self:resources.Resources.fixedwidth.Properties.BucketName}
