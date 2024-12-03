@@ -7,17 +7,17 @@
 2) Add the "serverless-lambda-s3" folder inside the local git folder.
 
 3) Locate to serverless-lambda-s3 folder and edit the serverless.yml. modify below setting
--      service: andyliew-serverless-lambda-s3
--      runtime: nodejs20.x 
--      region: us-east-1
--      name: andyliewProcessCSV
--      bucket: andyliew-serverless-bucket-input
--      BucketName: andyliew-serverless-bucket-output
+-         service: andyliew-serverless-lambda-s3
+          runtime: nodejs20.x 
+          region: us-east-1
+          name: andyliewProcessCSV
+          bucket: andyliew-serverless-bucket-input
+          BucketName: andyliew-serverless-bucket-output
 
 4) Setup the package and dependency
--      npm install -g serverless
--      npm install
--      npm ci
+-     npm install -g serverless
+      npm install
+      npm ci
 
 5) To deploy serverless into AWS run below command
 -      serverless deploy -v
